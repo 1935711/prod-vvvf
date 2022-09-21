@@ -1,1 +1,42 @@
-VVVF
+
+________________________________________
+      _    _ _    _ _    _   _____
+      |   /  |   /  |   /    /    '
+------|--/---|--/---|--/----/__---------
+      | /    | /    | /    /
+______|/_____|/_____|/____/_____________
+
+            1935711 Presents
+                  VVVF
+
+  Type ... : .......... Baremetal Demo
+  Date ... : .............. 2022-08-27
+  Party .. : ............. Xenium 2022
+  Compo .. : .................... Wild
+  Platform : ......... Raspberry Pi 1B
+
+A demo to commemorate 10 years since the
+release of the Raspberry Pi 1B.
+
+=========== Running The Demo ===========
+1. Download the tools with `apt-get inst
+   all gcc-arm-none-eabi binutils-arm-no
+   ne-eabi`.
+2. Generate audio with the `/data/audio_
+   convert.sh` bash script.
+3. Compile with `make`.
+4. `build/` dir will contain a `kernel.i
+   mg` (and other useful files).
+5. To create an SD card which the RPi c-
+   an boot from, we need to:
+   1. Get a copy of `github.com/raspberr
+      ypi/firmware`.
+   2. Create a `BOOT` partition on an SD
+      card.
+   3. Copy over the contents of the `boo
+      t/` directory from the repository
+      into the `BOOT` partition.
+6. Copy the generated `kernel.img` into
+   the `BOOT` partition. Do the same for
+   the `config.txt' (inside `/data`).
+7. Insert the SD card and power the RPi.
